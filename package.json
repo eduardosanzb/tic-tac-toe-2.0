@@ -1,0 +1,23 @@
+{
+  "name": "tic-tac-toe-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardosanzb/tic-tac-toe-2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardosanzb/tic-tac-toe-2.0/issues"
+  },
+  "homepage": "https://github.com/eduardosanzb/tic-tac-toe-2.0#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "next"
+  }
+}
