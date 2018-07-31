@@ -19,5 +19,15 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "next"
-  }
+  },
+  "ava": {
+		"files": [
+			"test/**/*.js"
+		],
+		"cache": true,
+		"concurrency": 5,
+		"failFast": true,
+		"failWithoutAssertions": false,
+		"compileEnhancements": false
+	}
 }
