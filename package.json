@@ -16,18 +16,28 @@
     "url": "https://github.com/eduardosanzb/tic-tac-toe-2.0/issues"
   },
   "homepage": "https://github.com/eduardosanzb/tic-tac-toe-2.0#readme",
-  "dependencies": {},
+  "dependencies": {
+    "mock-stdin": "^0.3.1",
+    "module-alias": "^2.1.0",
+    "sinon": "^6.1.4"
+  },
   "devDependencies": {
     "ava": "next"
   },
   "ava": {
-		"files": [
-			"test/**/*.js"
-		],
-		"cache": true,
-		"concurrency": 5,
-		"failFast": true,
-		"failWithoutAssertions": false,
-		"compileEnhancements": false
-	}
+    "files": [
+      "test/**/*.js"
+    ],
+    "cache": true,
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "compileEnhancements": false,
+    "require": [
+      "module-alias/register"
+    ]
+  },
+  "_moduleAliases": {
+    "@roles": "src/roles"
+  }
 }

@@ -1,14 +1,11 @@
-const printTable = table => {
-  const formattedTable = table.reduce((print, row, index) => {
-    const formatted = row.reduce((result, x, i) => {
-      return { ...result, [i]: x };
-    }, {});
-    print.push(formatted);
-    return print;
-  }, []);
-  console.table(formattedTable);
-};
+'use strict';
+require('module-alias/register')
 
-module.exports = {
-  printTable,
-};
+const Game  = require('@roles/Game');
+
+(function main() {
+  const game = new Game();
+  game.play();
+})();
+
+
