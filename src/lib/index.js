@@ -1,5 +1,7 @@
 'use strict';
 
+const { promisify } = require('util');
+
 /**
  * Formats the current board state to be used by console.table
  * @param {String[][]} table - The board state
@@ -14,6 +16,7 @@ function formatTable(table) {
     return print;
   }, []);
 }
+
 
 module.exports = {
   printTable: boardState => {

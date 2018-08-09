@@ -1,16 +1,6 @@
 'use strict';
 
-const readline = require('readline');
-const { promisify } = require('util');
-
-readline.Interface.prototype.question[promisify.custom] = function(prompt) {
-  return new Promise(resolve =>
-    readline.Interface.prototype.question.call(this, prompt, resolve),
-  );
-};
-readline.Interface.prototype.questionAsync = promisify(
-  readline.Interface.prototype.question,
-);
+const readline = require('@lib/readline');
 
 class Game {
   constructor({ players, board } = {}) {
@@ -29,8 +19,10 @@ class Game {
   }
 
   async _getMove(player) {
-    while(true) {
-      const rawInput = (await this.rl.questionAsync(`Whats your next move 🤔  ? (turn:"${player}")`)).trim();
+    while (true) {
+      const rawInput = (await this.rl.questionAsync(
+        `Whats your next move 🤔  ? (turn:"${player}")`,
+      )).trim();
       const move = rawInput.split(',');
       if (/^[\d],[\d]$/gi.test(rawInput) && this.board.withinBoundaries(move)) {
         return {
@@ -40,7 +32,6 @@ class Game {
       }
     }
   }
-
 
   play() {
     while (!this.board.gameEnded) {}

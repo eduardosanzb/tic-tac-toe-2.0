@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "test:watch": "ava --watch --verbose"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/eduardosanzb/tic-tac-toe-2.0#readme",
   "dependencies": {
+    "config": "^2.0.1",
     "mock-stdin": "^0.3.1",
     "module-alias": "^2.1.0",
     "sinon": "^6.1.4"
@@ -38,6 +40,7 @@
     ]
   },
   "_moduleAliases": {
-    "@roles": "src/roles"
+    "@roles": "src/roles",
+    "@lib": "src/lib"
   }
 }

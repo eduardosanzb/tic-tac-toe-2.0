@@ -1,5 +1,7 @@
+'use strict';
+
 const test = require('ava');
-const { formatTable } = require('../src/lib.js')
+const { formatTable } = require('@lib')
 
 const stdout = process.stdout;
 const stdin = process.stdin;
